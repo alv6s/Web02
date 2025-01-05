@@ -89,37 +89,35 @@ function PoliticaPrivacidade() {
   );
 }
 
-// Componente principal
 function App() {
-  const [language, setLanguage] = useState('en');
-
-  const t = (key) => translations[language][key];
-
-  return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
-      <Router>
-        <div className="navbar">
-          <nav>
-            <LanguageSelector />
-            <ul>
-              <li><Link to="/">{t('home')}</Link></li>
-              <li><Link to="/contactos">{t('contacts')}</Link></li>
-              <li><Link to="/termos-e-condicoes">{t('terms')}</Link></li>
-              <li><Link to="/politica-de-privacidade">{t('privacy')}</Link></li>
-            </ul>
-          </nav>
-        </div>
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contactos" element={<Contactos />} />
-            <Route path="/termos-e-condicoes" element={<TermosCondicoes />} />
-            <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
-          </Routes>
-        </div>
-      </Router>
-    </LanguageContext.Provider>
-  );
-}
-
-export default App;
+	const [language, setLanguage] = useState('en');
+	const t = (key) => translations[language][key];
+  
+	return (
+	  <LanguageContext.Provider value={{ language, setLanguage, t }}>
+		<Router>
+		  <div className="navbar">
+			<nav>
+			  <LanguageSelector />
+			  <ul>
+				<li><Link to="/">{t('home')}</Link></li>
+				<li><Link to="/contactos">{t('contacts')}</Link></li>
+				<li><Link to="/termos-e-condicoes">{t('terms')}</Link></li>
+				<li><Link to="/politica-de-privacidade">{t('privacy')}</Link></li>
+			  </ul>
+			</nav>
+		  </div>
+		  <div className="content">
+			<Routes>
+			  <Route path="/" element={<Home />} />
+			  <Route path="/contactos" element={<Contactos />} />
+			  <Route path="/termos-e-condicoes" element={<TermosCondicoes />} />
+			  <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
+			</Routes>
+		  </div>
+		</Router>
+	  </LanguageContext.Provider>
+	);
+  }
+  
+  export default App;
