@@ -1,20 +1,29 @@
+/* Estilo global do body */
 body {
-    font-family: Arial, sans-serif;
+	font-family: 'Urbanist', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
 
+/* Estilo do header */
 header {
-    background-color: #333;
+    background-color: #333; /* Cor de fundo escura para visibilidade */
     color: white;
-    padding: 1rem;
+    padding: 20px;
     text-align: center;
+    position: relative; /* Permite que o header fique no topo sem ser fixo */
+    top: 0;
+    left: 0;
+/* Garante que o header ocupe toda a largura da página */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
 }
 
+/* Estilos de navegação */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -27,6 +36,7 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Estilo do rodapé */
 footer {
     background-color: #333;
     color: white;
@@ -35,4 +45,13 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+main {
+    padding: 20px; /* Adiciona espaçamento interno nas laterais e no topo */
+    margin-top: 10px; /* Se necessário, ajusta o espaçamento para que o conteúdo não fique colado no header */
+}
+
+/* Espaçamento nas seções dentro do main */
+main section {
+    margin-bottom: 20px; /* Adiciona espaçamento entre as seções */
 }
