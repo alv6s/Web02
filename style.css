@@ -55,3 +55,6 @@ main {
 main section {
     margin-bottom: 20px; /* Adiciona espaçamento entre as seções */
 }
+h1, h2 {
+    color: #5467C7; /* Cor aplicada aos títulos */
+}
